@@ -1,0 +1,8 @@
+{
+  "name": "Remix Jodour.ma - Coming Soon",
+  "description": "صفحة انتظرونا لموقع جمعية جذور للتنمية البشرية - Jodour.ma Maintenance \u0026 Subscription Page",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
