@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { Language, translations } from '@/lib/translations';
 import { Globe, ShieldAlert } from 'lucide-react';
 
@@ -28,10 +29,12 @@ export const HeaderNavbar: React.FC<HeaderNavbarProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
         {/* Brand Logo & Name */}
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden border border-[#b7e4c7]/30 bg-[#1b4332] p-0.5 shadow-md flex items-center justify-center">
-            <img
+          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden border border-[#b7e4c7]/30 bg-[#1b4332] p-0.5 shadow-md flex items-center justify-center relative">
+            <Image
               src="/jodour-logo.jpg"
               alt="jodour.ma"
+              width={44}
+              height={44}
               className="w-full h-full object-cover rounded-lg"
               referrerPolicy="no-referrer"
             />

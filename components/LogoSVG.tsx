@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 interface LogoSVGProps {
   className?: string;
@@ -14,13 +15,15 @@ export const LogoSVG: React.FC<LogoSVGProps> = ({ className = '', size = 120 }) 
     <div className={`relative inline-flex flex-col items-center justify-center ${className}`}>
       {/* Container with golden and glowing radial ring */}
       <div 
-        className="relative group p-1.5 rounded-2xl bg-gradient-to-b from-[#1e3a8a] via-[#0f2b48] to-[#060e1a] border border-emerald-500/30 shadow-2xl shadow-emerald-900/30 hover:border-emerald-400/60 transition-all duration-300"
+        className="relative group p-1.5 rounded-2xl bg-gradient-to-b from-[#1e3a8a] via-[#0f2b48] to-[#060e1a] border border-emerald-500/30 shadow-2xl shadow-emerald-900/30 hover:border-emerald-400/60 transition-all duration-300 overflow-hidden flex items-center justify-center"
         style={{ width: size, height: size * 1.15 }}
       >
         {!imageError ? (
-          <img
+          <Image
             src="/jodour-logo.jpg"
             alt="جمعية جذور للتنمية البشرية - ARDH"
+            width={size}
+            height={Math.round(size * 1.15)}
             className="w-full h-full object-contain rounded-xl drop-shadow-md"
             referrerPolicy="no-referrer"
             onError={() => {

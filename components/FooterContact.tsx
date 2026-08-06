@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { Language, translations } from '@/lib/translations';
 import { Mail, Phone, MapPin, Globe, Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react';
 
@@ -26,12 +27,16 @@ export const FooterContact: React.FC<FooterContactProps> = ({ currentLang }) => 
           {/* Association Brand Info */}
           <div className="space-y-3">
             <div className="flex items-center gap-3">
-              <img
-                src="/jodour-logo.jpg"
-                alt="jodour.ma logo"
-                className="w-12 h-12 object-contain rounded-xl border border-[#b7e4c7]/30 p-0.5 bg-[#1b4332]"
-                referrerPolicy="no-referrer"
-              />
+              <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-[#b7e4c7]/30 p-0.5 bg-[#1b4332] flex items-center justify-center">
+                <Image
+                  src="/jodour-logo.jpg"
+                  alt="jodour.ma logo"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-contain rounded-lg"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
               <div>
                 <h3 className="font-extrabold text-[#b7e4c7] text-lg tracking-wider font-mono">jodour.ma</h3>
                 <p className="text-xs text-[#52b788] font-bold">
